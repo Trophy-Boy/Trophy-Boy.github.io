@@ -5,8 +5,8 @@ body {
 
     font-family: 'arial', normal;
    
-      background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      background-size: 400% 400%;
+      background: linear-gradient(to right, #0b3474, #004b84, #00608a, #00738a, #008587, #1b8f89, #30998a, #43a38a, #3ca992, #32ae9b, #25b4a4, #0db9ae);
+      background-size: 200% 200%;
 	animation: gradient 15s ease infinite;
   height: 100vh;
   overflow: hidden;
@@ -122,22 +122,7 @@ body {
   
   
   
-  #contacts {
-      margin: 0 auto;
-    padding: 100px 0;
-      background: #224;
-      width: 100%;
-    color: #fff;
-      transition: all 1.7s ease;
-  }
-  #contacts:hover{
-      background: #fa3380;
-      color: #fff;
-  }
-  #contacts .social {
-    padding-bottom: 20px;
-    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-  }
+ 
   
   
  
@@ -185,18 +170,9 @@ body {
       border-radius: 100%;
   }
   
-  .portrait {
-      border-radius: 100%;
-      box-shadow: 0 13px 30px rgb(0 0 0 / 0.2);
-      position: absolute;
-      margin: 0 auto;
-      top:calc(50% - 135px);
-      left:calc(50% - 85px);
-  
  
-  }
   
-  
+
   
   @-webkit-keyframes sdb {
     0% {
@@ -236,6 +212,10 @@ body {
  
 .container{
     animation: rotation 8s infinite;
+    width:500px;
+    position: relative;
+    top:10%;
+    left:20%;
   }
   
   .square {
@@ -244,8 +224,8 @@ body {
     height: 200px;
     margin: 75px auto;
     border-radius:50%;
-    background : linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-    background-size: 300% 300%;
+    background: linear-gradient(to right, #0b3474, #004b84, #00608a, #00738a, #008587, #1b8f89, #30998a, #43a38a, #3ca992, #32ae9b, #25b4a4, #0db9ae);
+    background-size: 200% 200%;
     box-shadow: 0px 0px 40px rgba(0,0,0,.7);
     animation: switch 8s infinite;
   }
@@ -253,16 +233,17 @@ body {
   .anchor {
     position: absolute;
     transform: translate(-25px, -25px);
+
   }
   
   .circle {
     position: absolute;
     width: 50px;
     height: 50px;
-    background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background: linear-gradient(to right, #0b3474, #004b84, #00608a, #00738a, #008587, #1b8f89, #30998a, #43a38a, #3ca992, #32ae9b, #25b4a4, #0db9ae);
     opacity: 0.5;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    box-shadow: 0px 0px 40px rgba(0,0,0,.7);
     animation: swing 8s infinite;
   }
   
@@ -271,12 +252,12 @@ body {
   
   @keyframes swing{
     0% {transform: translate(0px, 0px);}
-    12.5% {transform: translate(200px, 0px);}
-    25% {transform: translate(200px, 0px);}
-    37.5% {transform: translate(200px, 200px);}
-    50% {transform: translate(200px, 200px);}
-    62.5% {transform: translate(0px, 200px);}
-    75% {transform: translate(0px, 200px);}
+    12.5% {transform: translate(50px, 0px);}
+    25% {transform: translate(50px, 0px);}
+    37.5% {transform: translate(50px, 50px);}
+    50% {transform: translate(50px, 50px);}
+    62.5% {transform: translate(0px, 50px);}
+    75% {transform: translate(0px, 50px);}
     87.5% {transform: translate(0px, 0px);}
     100% {transform: translate(0px, 0px);}
   }
@@ -312,6 +293,7 @@ body {
     color:#fff;
     font-family:helvetica;
   }
+
 
   
   
@@ -356,3 +338,16 @@ body {
     100% {transform: rotate(360deg)}
   } 
  
+
+  .pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
