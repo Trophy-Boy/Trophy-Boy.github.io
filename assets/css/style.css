@@ -59,6 +59,10 @@ body {
 }
 
 
+.cursor {
+  width:20px !important;
+}
+
   header {
     display: table;
     position: relative;

@@ -43,10 +43,10 @@ $(document).ready(function() {
 		Typed.new('#typed', {
             stringsElement: document.getElementById('typed-strings'),
 			loop: true,
-			typeSpeed: 7,
-			backSpeed: 2,
-			startDelay: 1000,
-			backDelay: 1200
+			typeSpeed: 8,
+			backSpeed: 3,
+			startDelay: 2000,
+			backDelay: 1500
         });
 	}; // all loaded
 	
