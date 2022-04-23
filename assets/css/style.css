@@ -170,7 +170,12 @@ body {
       border-radius: 100%;
   }
   
- 
+ .contact {
+   color:whitesmoke;
+   position: absolute;
+   bottom:30px;
+   right:30px;
+ }
   
 
   
