@@ -4,9 +4,26 @@
 body {
 
     font-family: 'arial', normal;
-      background: skyblue;  /* fallback for old browsers */
    
       background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
       overflow: hidden;
     }
   h1.major,
