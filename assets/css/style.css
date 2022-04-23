@@ -5,8 +5,8 @@ body {
 
     font-family: 'arial', normal;
       background: skyblue;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #FC5C7D, #6A82FB);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #FC5C7D, #6A82FB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+      background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       overflow: hidden;
     }
   h1.major,
@@ -227,7 +227,7 @@ body {
     height: 200px;
     margin: 75px auto;
     border-radius:50%;
-    background : linear-gradient(to left top, #FC5C7D, #6A82FB);
+    background : linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     background-size: 300% 300%;
     box-shadow: 0 0 20px rgba(0,0,0,.3);
     animation: switch 8s infinite;
