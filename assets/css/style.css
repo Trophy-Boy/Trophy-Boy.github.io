@@ -3,7 +3,7 @@
 
 body {
 
-    font-family: 'arial', normal;
+    font-family: 'Share Tech Mono', normal;
    
       background: linear-gradient(to right, #0b3474, #004b84, #00608a, #00738a, #008587, #1b8f89, #30998a, #43a38a, #3ca992, #32ae9b, #25b4a4, #0db9ae);
       background-size: 200% 200%;
@@ -48,7 +48,15 @@ body {
     text-decoration: none;
   }
 
-
+.signature {
+  font: bold 30px arial, sans-serif;
+  background-color:linear-gradient(to right, #0b3474, #004b84, #00608a, #00738a, #008587, #1b8f89, #30998a, #43a38a, #3ca992, #32ae9b, #25b4a4, #0db9ae);
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
 
 
   header {
@@ -165,9 +173,11 @@ body {
   }
   img{
       z-index: 100;
-      width: 170px;
-      height:170px;
+      width: 200px;
+      height:200px;
       border-radius: 100%;
+      opacity: 0.75;
+      backdrop-filter: contrast(400%);
   }
   
  .contact {
