@@ -191,11 +191,11 @@ $(document).ready(function() {
 	}
 }(window, document, window.jQuery);
 
-
 $(document).ready(function(){
     animateDiv();
     
 });
+
 
 function makeNewPosition(){
     
@@ -217,3 +217,5 @@ function animateDiv(){
     });
     
 };
+
+

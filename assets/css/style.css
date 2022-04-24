@@ -229,7 +229,7 @@ body {
  
 .container{
     animation: rotation 15s infinite;
-    width:450px;
+    width:550px;
     position: relative;
     top:-100px;
     left:0;
@@ -247,6 +247,7 @@ body {
   .anchor {
     position: absolute;
     transform: translate(-25px, -25px);
+    animation: swing 20s infinite;
 
   }
   
@@ -254,15 +255,22 @@ body {
     position: fixed;
     width: 100px;
     height: 100px;
-    background: linear-gradient(to right bottom, #ff0587, #fa009d, #ee00b5, #da00d0, #bc12eb);
+    background: linear-gradient(to right bottom, #d16ba5, #da61a9, #e356ad, #eb49b1, #f337b5, #f434bc, #f532c3, #f530cb, #ee41d6, #e64fe1, #de5beb, #d566f4);
     opacity: 1;
     border-radius: 50%;
-    box-shadow: 0px 0px 40px rgba(0,0,0,.7);
-    animation: rotation 15s infinite;
+    box-shadow: inset 1.8em 1.8em 1.8em 0 rgba(200,200,200,0.3), inset -1.8em -1.8em 1.8em 0 rgba(0,0,0,0.5), 4px 2px 28px 7px rgba(0,0,0,0.3);
     text-align: center;
+    border:1px solid rgba(80, 80, 80, 0.5);
     cursor: pointer;
+    animation: gelatine 0.5s infinite;
   }
-  
+  @keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
+
 
   .tap-text {
     font-size: 150%;
