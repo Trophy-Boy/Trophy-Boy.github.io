@@ -264,7 +264,9 @@ body {
   }
   
 
-
+  .tap-text {
+    font-size: 150%;
+  }
   
   @keyframes swing{
     0% {transform: translate(0px, 0px);}
