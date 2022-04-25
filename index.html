@@ -22,7 +22,7 @@
           </svg>   
                 <div class="container disable-select">
                   <div class="anchor disable-select">
-                      <a class="contact circle  disable-select" href="mailto:done_theta.0h@icloud.com"></a>
+                      <a id="ball" class="contact circle small disable-select" href="mailto:done_theta.0h@icloud.com"> </a>
                   </div>
                 </div>
                     <br>
@@ -52,11 +52,30 @@
                   </h1>
                   <!-- TITLE -->
           <h3 class="signature disable-select">Dev | by Oliver</h3>
+          <div class="bottom">
           <p class="tap-text disable-select">Tap the ball to mail me...</p>
-        </div>
+          <div style="align-items: center;">
+          <button id="easy-mode">Make it easy</button>
+          <button id="make-effort">I'll make an effort</button>
+          </div>
+          </div>
+          </div>
       </header> 
       <footer>
         <a class="codepen" href="https://codepen.io/trophy-boy/pen/NWXVLvL" target="_blank">See this in Codepen</a>
       </footer>
+
+<script>
+$( "#easy-mode" ).click(function() {
+  $('.circle').animate({ width: "400px", height: "400px" });
+  setTimeout(function() { $('.circle').addClass('big') }, 300);
+});
+
+$( "#make-effort" ).click(function() {
+  $('.circle').animate({ width: "100px", height: "100px" });
+  setTimeout(function() { $('.circle').removeClass('big') }, 300);
+});
+</script>
+
 </body>
 </html>
