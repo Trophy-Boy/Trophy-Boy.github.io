@@ -1,5 +1,3 @@
-
-
 var scrollToElement = function(el, ms){
     var speed = (ms) ? ms : 600;
     $('html,body').animate({
@@ -26,9 +24,6 @@ $(document).ready(function() {
   });
 });
 
-
-
-
 (function () {
    'use strict';
 	
@@ -49,18 +44,8 @@ $(document).ready(function() {
 			backDelay: 1500
         });
 	}; // all loaded
-	
-	  
+	 
 }());
-
-
-
-
-
-/*
-	PLUGINS
-*/
-
 
 
 ! function(t, s, e) {
@@ -200,8 +185,8 @@ $(document).ready(function(){
 function makeNewPosition(){
     
     // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 1000;
-    var w = $(window).width() - 1000;
+    var h = $(window).height() - 1500;
+    var w = $(window).width() - 1500;
     
     var nh = Math.floor(Math.random() * h);
     var nw = Math.floor(Math.random() * w);
@@ -210,6 +195,7 @@ function makeNewPosition(){
     
 }
 
+
 function animateDiv(){
     var newq = makeNewPosition();
     $('.circle').animate({ top: newq[0], left: newq[1] }, function(){
@@ -217,5 +203,3 @@ function animateDiv(){
     });
     
 };
-
-

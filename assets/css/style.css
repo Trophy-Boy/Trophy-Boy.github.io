@@ -1,30 +1,13 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
 
 body {
 
     font-family: 'Share Tech Mono', normal;
-   
-      background: #cccccc;
-	animation: gradient 15s ease infinite;
-  height: 100vh;
-  overflow: hidden;
+    background-color: #CCCCCC; 
+    height: 100vh;
+    overflow: hidden;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-
-  
   h1.major,
   h2.major,
   h3.major,
@@ -41,11 +24,6 @@ body {
   #typer-size{
       font-size: 45px;
   }
-  a:hover,
-  a:focus {
-    color: white;
-    text-decoration: none;
-  }
 
 .signature {
   font: bold 50px arial, sans-serif;
@@ -56,9 +34,6 @@ body {
      -moz-background-clip: text;
           background-clip: text;
 }
-
-
-
 
   header {
     display: table;
@@ -128,14 +103,6 @@ body {
     animation: sdb 3s infinite;
     box-sizing: border-box;
   }
-  
-  
-  
- 
-  
-  
- 
-  
  
   hr.style17 {
       border-top: 1px solid pink;
@@ -163,35 +130,7 @@ body {
       transform: rotate(60deg);
   }
   
-  
- 
-
-  
-  .p-img{
-      text-align: center;
-      position: relative;
-      top: -70px;
-  }
-  img{
-      z-index: 100;
-      width: 200px;
-      height:200px;
-      border-radius: 100%;
-      opacity: 0.75;
-      backdrop-filter: contrast(400%);
-  }
-  
- .contact {
-   color:whitesmoke;
-    position:relative;
-    top:25%;
-
-
- }
-  
-
-  
-  @-webkit-keyframes sdb {
+@-webkit-keyframes sdb {
     0% {
       opacity: 0;
     }
@@ -221,11 +160,6 @@ body {
       opacity: 0;
     }
   }
-  
-  
-  
-  
-  
  
 .container{
     animation: rotation 15s infinite;
@@ -234,16 +168,7 @@ body {
     top:-100px;
     left:0;
   }
-  
-  .square {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 75px auto;
-    border-radius:50%;
-    box-shadow: 0px 0px 40px rgba(0,0,0,.7);
-  }
-  
+
   .anchor {
     position: absolute;
     transform: translate(-25px, -25px);
@@ -255,7 +180,7 @@ body {
     position: fixed;
     width: 100px;
     height: 100px;
-    background: linear-gradient(to right bottom, #d16ba5, #da61a9, #e356ad, #eb49b1, #f337b5, #f434bc, #f532c3, #f530cb, #ee41d6, #e64fe1, #de5beb, #d566f4);
+    background: linear-gradient(to right bottom,        #d16ba5, #da61a9, #e356ad, #eb49b1, #f337b5, #f434bc, #f532c3, #f530cb, #ee41d6, #e64fe1, #de5beb, #d566f4);
     opacity: 1;
     border-radius: 50%;
     box-shadow: inset 1.8em 1.8em 1.8em 0 rgba(200,200,200,0.3), inset -1.8em -1.8em 1.8em 0 rgba(0,0,0,0.5), 4px 2px 28px 7px rgba(0,0,0,0.3);
@@ -271,11 +196,6 @@ body {
     75% { transform: scale(0.95, 1.05); }
   }
 
-
-  .tap-text {
-    font-size: 150%;
-  }
-  
   @keyframes swing{
     0% {transform: translate(0px, 0px);}
     12.5% {transform: translate(50px, 0px);}
@@ -286,18 +206,6 @@ body {
     75% {transform: translate(0px, 50px);}
     87.5% {transform: translate(0px, 0px);}
     100% {transform: translate(0px, 0px);}
-  }
-  
-  @keyframes switch{
-    0% {background-position: 0% 0%}
-    12.5% {background-position: 100% 0%}
-    25% {background-position: 100% 0%}
-    37.5% {background-position: 100% 100%}
-    50% {background-position: 100% 100%}
-    62.5% {background-position: 0% 100%}
-    75% {background-position: 0% 100%}
-    87.5% {background-position: 0% 0%}
-    100% {background-position: 0% 0%}
   }
   
   @keyframes rotation {
@@ -317,26 +225,6 @@ body {
     color:#fff;
     font-family:helvetica;
   }
-
-
-  
-  
-
- 
-
-  .pulse {
-  animation: pulse-animation 2s infinite;
-}
-
-@keyframes pulse-animation {
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-  }
-}
-
 
 svg {
   width:250px;
@@ -359,3 +247,20 @@ svg:hover .eyes{animation: eyes 1s cubic-bezier(.7, 0.000, 0.4, 1.000);}
 @keyframes smile { 50% { stroke-dasharray:20,5.1327;} }
 @keyframes eyes  { 70% { stroke-dasharray:1,0,.5,23.6327;} }
 
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+ -webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.codepen {
+  width:auto;
+  padding:5px 8px;
+  background: whitesmoke;
+  color: #868686;
+  position: fixed;
+  right:0;
+  bottom: 0;
+}
