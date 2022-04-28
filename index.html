@@ -1,6 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+      <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="assets/style.css">
@@ -9,7 +10,7 @@
     </head>
 
         <body class="animated fadeIn">
-            
+          
             <canvas id="canvas"></canvas>
 
 
@@ -40,16 +41,24 @@
             <div class="buttons">
                 <div style="align-items: center;">
                     <span class="tap-text disable-select">Tap the ball for a bit of fun</span>
-                    <span id="enjoy" class="tap-text" style="display: none;">Now enjoy the fireworks!<br>Use the crosshair cursor to fire away...</span>
+                    <span id="enjoy" class="tap-text" style="display: none;">Now enjoy the fireworks and music!<br>Use the crosshair cursor to fire away...</span>
                     <br>
                     <br>
                 <button id="easy-mode">Make it easy</button>
+                <button id="start" style="display: none;">Play</button>
+                <button id="pause" style="display: none;">Pause</button>
                 </div>
                 </div>
                 
         </div>
+      
 
 
+
+        
+
+
+        
 <div class="container disable-select">
     <div class="anchor disable-select">
         <div id="ball" class="circle small disable-select"></div>
@@ -78,7 +87,37 @@
       setTimeout(function() { $('#easy-mode').slideUp('slow') }, 300);
       setTimeout(function() { $('.tap-text').slideUp('slow') }, 300);
       setTimeout(function() { $('#enjoy').fadeIn('slow') }, 1500);
+      setTimeout(function() { $('#start').slideDown('fast') }, 1500);
+      setTimeout(function() { $('#pause').slideDown('fast') }, 1500);
     loop();
+
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'https://www.dl-sounds.com/wp-content/uploads/edd/2017/07/Patakas-World.mp3');
+    
+    audioElement.addEventListener('ended', function() {
+        this.play();
+    }, false);
+    
+    audioElement.addEventListener("canplay",function(){
+        $("#length").text("Duration:" + audioElement.duration + " seconds");
+        $("#source").text("Source:" + audioElement.src);
+        $("#status").text("Status: Ready to play").css("color","green");
+    });
+    
+    audioElement.addEventListener("timeupdate",function(){
+        $("#currentTime").text("Current second:" + audioElement.currentTime);
+    });
+
+    audioElement.play();
+
+    $('#start').click(function() {
+        audioElement.play();
+    });
+
+    $('#pause').click(function() {
+        audioElement.pause();
+    });
+
    }); 
 </script>
     </body>
