@@ -1,81 +1,85 @@
-<!DOCTYPE HTML>
 <html>
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>
-</head>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<body>
-<header id="header">
-        <div class="vert-text">
-          <svg viewbox="0 0 10 10">
-            <circle class="smile" cx="5" cy="5" r="4"
-              stroke-dashoffset="-.5"
-              stroke-dasharray="11.5,13.6327" />
-            <circle class="eyes" cx="5" cy="5" r="4" 
-              stroke-dashoffset="-15.5"
-              stroke-dasharray="0,6.6327,0,17.5" />
-          </svg>   
-                <div class="container disable-select">
-                  <div class="anchor disable-select">
-                      <a id="ball" class="contact circle small disable-select" href="mailto:done_theta.0h@icloud.com"> </a>
-                  </div>
-                </div>
+    </head>
+
+        <body class="animated fadeIn">
+            
+            <canvas id="canvas"></canvas>
+
+
+                <div class="cards">
+                    
+
+                    <div class="inner">
+                     <div class="svg">
+                        <svg viewbox="0 0 10 10">
+                            <circle class="smile" cx="5" cy="5" r="4"
+                              stroke-dashoffset="-.5"
+                              stroke-dasharray="11.5,13.6327" />
+                            <circle class="eyes" cx="5" cy="5" r="4" 
+                              stroke-dashoffset="-15.5"
+                              stroke-dasharray="0,6.6327,0,17.5" />
+                          </svg>  
+                        </div>
+
+                        <h1 class="signature disable-select">Dev | by Oliver</h1>
+              <span class="subtext">@shufflefox</span>
+              <div class="icons animated fadeInDown">
+                <a class="twitter" href="https://twitter.com/shufflefox" target="_blank"><i class="fa fa-twitter"></i></a>          
+                <a class="codepen" href="https://codepen.io/shufflefox" target="_blank"><i class="fa fa-codepen"></i></a>
+                <a class="github" href="https://github.com/shufflefox" target="_blank"><i class="fa fa-github"></i></a>
+                <a class="send" href="mailto:done_theta.0h@icloud.com"><i class="fa fa-envelope-square"></i></a>
+              </div>
+            </div>
+            <div class="buttons">
+                <div style="align-items: center;">
+                    <span class="tap-text disable-select">Tap the ball for a bit of fun</span>
+                    <span id="enjoy" class="tap-text" style="display: none;">Now enjoy the fireworks!<br>Use the crosshair cursor to fire away...</span>
                     <br>
-                    <br>             
-<h1 id="typer-size">                
-                      <!-- TEXTS -->
-                      <span id="typed"></span>
-                      <div id="typed-strings">
-                          <p>Hello world!</span> </p>
-                          <p>I'm Oliver</p>
-                          <p><span class="#">Let's code</span></p>
-                          <p>I do web development</p>
-                          <p>I create SaaS solutions</p>
-                                            <p>HTML</p>
-                                            <p>CSS</p>
-                          <p>JAVASCRIPT</p>
-                                            <p>SQL</p>
-                                            <p>jQuery</p>
-                                            <p>Material design</p>
-                                              <p>Wordpress</p>
-                                              <p>Cloud applications</p>
-                                               <p>Apple certified</p>
-                                              <p>Caspio certified</p>
-                                              <p>Code on!</p>
-                      </div>
-                      <!-- TEXTS ENDS -->
-                  </h1>
-                  <!-- TITLE -->
-          <h3 class="signature disable-select">Dev | by Oliver</h3>
-          <div class="bottom">
-          <p class="tap-text disable-select">Tap the ball to mail me...</p>
-          <div style="align-items: center;">
-          <button id="easy-mode">Make it easy</button>
-          <button id="make-effort">I'll make an effort</button>
-          </div>
-          </div>
-          </div>
-      </header> 
-      <footer>
-        <a class="codepen" href="https://codepen.io/trophy-boy/pen/NWXVLvL" target="_blank">See this in Codepen</a>
-      </footer>
+                    <br>
+                <button id="easy-mode">Make it easy</button>
+                </div>
+                </div>
+                
+        </div>
+
+
+<div class="container disable-select">
+    <div class="anchor disable-select">
+        <div id="ball" class="circle small disable-select"></div>
+    </div>
+  </div>
+
+  <script src="assets/script.js"></script>
+
+  <script>
+    $( "#easy-mode" ).click(function() {
+      $('.circle').animate({ width: "400px", height: "400px" });
+      setTimeout(function() { $('.circle').addClass('big') }, 300);
+    });
+    
+    </script>
+
+
+
+
+<script src="assets/fun.js"></script>
 
 <script>
-$( "#easy-mode" ).click(function() {
-  $('.circle').animate({ width: "400px", height: "400px" });
-  setTimeout(function() { $('.circle').addClass('big') }, 300);
-});
-
-$( "#make-effort" ).click(function() {
-  $('.circle').animate({ width: "100px", height: "100px" });
-  setTimeout(function() { $('.circle').removeClass('big') }, 300);
-});
+   $('.circle').click(function(){
+    $('.circle').animate({ width: "100px", height: "100px" });
+      setTimeout(function() { $('.circle').fadeOut() }, 300);
+      setTimeout(function() { $('#easy-mode').slideUp('slow') }, 300);
+      setTimeout(function() { $('.tap-text').slideUp('slow') }, 300);
+      setTimeout(function() { $('#enjoy').fadeIn('slow') }, 1500);
+    loop();
+   }); 
 </script>
-
-</body>
+    </body>
 </html>
