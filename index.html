@@ -65,6 +65,8 @@
     </div>
   </div>
 
+  <audio id="popSound" src="https://soundbible.com/mp3/Blop-Mark_DiAngelo-79054334.mp3"></audio>
+
   <script src="assets/script.js"></script>
 
   <script>
@@ -82,6 +84,10 @@
 
 <script>
    $('.circle').click(function(){
+
+    popSound = document.getElementById("popSound");
+    popSound.play();
+
     $('.circle').animate({ width: "100px", height: "100px" });
       setTimeout(function() { $('.circle').fadeOut() }, 300);
       setTimeout(function() { $('#easy-mode').slideUp('slow') }, 300);
@@ -108,7 +114,9 @@
         $("#currentTime").text("Current second:" + audioElement.currentTime);
     });
 
-    audioElement.play();
+
+    setTimeout(function() { audioElement.play() }, 2000);
+
 
     $('#start').click(function() {
         audioElement.play();
