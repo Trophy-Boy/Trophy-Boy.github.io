@@ -5,6 +5,7 @@ body {
     align-items: center;
     font-family: source sans pro;
     color: lightgrey;
+    overflow: hidden;
   }
 
  
@@ -16,6 +17,7 @@ body {
     display: block;
     background: #565656;
     z-index: 0;
+    overflow: hidden;
 }
   
   a:link {
