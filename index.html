@@ -11,6 +11,8 @@
 
         <body class="animated fadeIn">
           
+
+
             <canvas id="canvas"></canvas>
 
 
@@ -41,12 +43,14 @@
             <div class="buttons">
                 <div style="align-items: center;">
                     <span class="tap-text disable-select">Tap the ball for a bit of fun</span>
-                    <span id="enjoy" class="tap-text" style="display: none;">Now enjoy the fireworks and music!<br>Use the crosshair cursor to fire away...</span>
+                    <span id="enjoy" class="tap-text" style="display: none;"></span><br><span id="cursor" class="tap-text" style="display: none;"></span>
                     <br>
                     <br>
                 <button id="easy-mode">Make it easy</button>
                 <button id="start" style="display: none;">Play</button>
                 <button id="pause" style="display: none;">Pause</button>
+                <br>
+                <button id="restart" style="display: none;">Restart the music</button>
                 </div>
                 </div>
                 
@@ -54,6 +58,7 @@
       
 
 
+       
 
         
 
@@ -64,6 +69,9 @@
         <div id="ball" class="circle small disable-select"></div>
     </div>
   </div>
+
+
+         
 
   <audio id="popSound" src="https://soundbible.com/mp3/Blop-Mark_DiAngelo-79054334.mp3"></audio>
 
@@ -77,10 +85,10 @@
     
     </script>
 
+<script src="assets/fireworks.js"></script>
 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer data-deferred="1"></script>
 
-
-<script src="assets/fun.js"></script>
 
 <script>
    $('.circle').click(function(){
@@ -92,16 +100,46 @@
       setTimeout(function() { $('.circle').fadeOut() }, 300);
       setTimeout(function() { $('#easy-mode').slideUp('slow') }, 300);
       setTimeout(function() { $('.tap-text').slideUp('slow') }, 300);
+      $('#enjoy').text('Now enjoy the music and fireworks!');
+      setTimeout(function() { $('#enjoy').fadeIn('slow') }, 1500);
       setTimeout(function() { $('#enjoy').fadeIn('slow') }, 1500);
       setTimeout(function() { $('#start').slideDown('fast') }, 1500);
       setTimeout(function() { $('#pause').slideDown('fast') }, 1500);
     loop();
 
+
+
+    var isMobile = {
+                        Android: function() {
+                            return navigator.userAgent.match(/Android/i);
+                        },
+                        BlackBerry: function() {
+                            return navigator.userAgent.match(/BlackBerry/i);
+                        },
+                        iOS: function() {
+                            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                        },
+                        Opera: function() {
+                            return navigator.userAgent.match(/Opera Mini/i);
+                        },
+                        Windows: function() {
+                            return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+                        },
+                        any: function() {
+                            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                        }
+                    };
+                    
+                    if(! isMobile.any() ) 
+                    $('#cursor').text('Click the crosshair cursor to fire away.');
+                    setTimeout(function() { $('#cursor').fadeIn('slow') }, 1500);
+
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', 'https://www.dl-sounds.com/wp-content/uploads/edd/2017/07/Patakas-World.mp3');
     
     audioElement.addEventListener('ended', function() {
-        this.play();
+      setTimeout(function() { $('#restart').slideDown('fast') }, 300);
+        this.pause();
     }, false);
     
     audioElement.addEventListener("canplay",function(){
@@ -125,6 +163,12 @@
     $('#pause').click(function() {
         audioElement.pause();
     });
+
+    $('#restart').click(function() {
+        audioElement.currentTime = 0;
+        audioElement.play();
+    });
+
 
    }); 
 </script>
