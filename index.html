@@ -14,6 +14,7 @@
             <canvas id="canvas"></canvas>
 
                 <div class="cards">
+                    
 
                     <div class="inner">
                      <div class="svg">
@@ -55,13 +56,21 @@
       
 
 
+       
+
+        
+
+
+        
 <div class="container disable-select">
     <div class="anchor disable-select">
         <div id="ball" class="circle small disable-select"></div>
     </div>
   </div>
+  <div id="mycursor"></div>
 
-     
+
+         
 
   <audio id="popSound" src="https://soundbible.com/mp3/Blop-Mark_DiAngelo-79054334.mp3"></audio>
 
@@ -71,6 +80,15 @@
     $( "#easy-mode" ).click(function() {
       $('.circle').animate({ width: "400px", height: "400px" });
       setTimeout(function() { $('.circle').addClass('big') }, 300);
+      $('#ball').mouseout(function(){
+              $('#mycursor').hide();
+         });
+         $('#ball').mouseenter(function(){
+              $('#mycursor').show();
+         });
+         $('#ball').mousemove(function(e){
+              $('#mycursor').css('left', e.clientX - 20).css('top', e.clientY + 7);
+         });
     });
     
     </script>
